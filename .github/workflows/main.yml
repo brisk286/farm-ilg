@@ -1,4 +1,4 @@
-name: Java CI with Maven by Brisk
+name: Aliyun CI
 
 on:
   push:
