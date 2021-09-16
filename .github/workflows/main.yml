@@ -45,7 +45,8 @@ jobs:
         if: always()
         uses: fifsky/ssh-action@master
         with:
-          command: | # 命令中的 & 表示在后台运行进程
+          command: | # 杀死指定端口进程 并挂起jar包
+            kill -9 $(netstat -nlp | grep :8080 | awk '{print $7}' | awk -F'/' '{ print $1 }') &&
             cd ../home/Farm-ilg/ && java -jar farm_serve-0.0.1-SNAPSHOT.jar &
           host: ${{ secrets.HOST }}
           user: ${{ secrets.SSH_USER }}
