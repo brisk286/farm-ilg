@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.brisk.farm_serve.mbg.mapper.AreaMapper">
+
+    <select id="getAreaById" resultType="com.brisk.farm_serve.entity.Area">
+        select * from area where area_id = #{area_id};
+    </select>
+
+    <select id="getAreaByUserId" resultType="com.brisk.farm_serve.entity.Area">
+        SELECT area.area_id, area.product_cls, area.farm_id FROM user, area
+        WHERE user.user_id = #{user_id}
+          AND user.farm_id = area.farm_id;
+    </select>
+
+    <select id="getWrongDeviceByUser" resultType="com.brisk.farm_serve.entity.Device">
+        SELECT * FROM device WHERE device.area_id IN
+            (SELECT area.area_id FROM `user`, `area`
+            WHERE user.user_id = #{user_id} AND user.farm_id = area.farm_id)
+        AND device.is_wrong = 0;
+    </select>
+
+    <select id="getRunDeviceByUser" resultType="com.brisk.farm_serve.entity.Device">
+        SELECT * FROM device WHERE device.area_id IN
+            (SELECT area.area_id FROM `user`, `area`
+             WHERE user.user_id = #{user_id} AND user.farm_id = area.farm_id)
+        AND device.is_run = 1;
+    </select>
+    <select id="getAreaByCls" resultType="com.brisk.farm_serve.entity.Area">
+        SELECT * FROM area WHERE area.product_cls = #{area_cls};
+    </select>
+
+</mapper>

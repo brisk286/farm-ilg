@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.brisk.farm_serve.mbg.mapper.DeviceMapper">
+
+    <select id="getDeviceById" resultType="com.brisk.farm_serve.entity.Device">
+        select * from device where device_id = #{device_id};
+    </select>
+
+    <insert id="insertDevice">
+        insert into
+            device (device_id, device_name, device_system, device_value, last_time, dur_time, area_id, is_run, is_wrong, ser_number, elec_value, net_condition)
+        value
+            (#{device.device_id}, #{device.device_name}, #{device.device_system}, #{device.device_value}, #{device.last_time}, #{device.dur_time}, #{device.area_id}, #{device.is_run}, #{device.is_wrong}, #{device.ser_number}, #{device.elec_value}, #{device.net_condition});
+    </insert>
+
+    <delete id="deleteDevice">
+        delete from
+            device
+        where
+            device_id = #{device_id};
+    </delete>
+
+</mapper>

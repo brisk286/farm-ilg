@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.brisk.farm_serve.mbg.mapper.CommitMapper">
+
+    <select id="getCommitById" resultType="com.brisk.farm_serve.entity.Commit">
+        select * from commit where commit_id = #{commit_id};
+    </select>
+
+    <select id="getCommitInTime" resultType="com.brisk.farm_serve.entity.Commit">
+
+
+    </select>
+
+    <insert id="insertCommit">
+        insert into
+            commit (commit_id, device_id, commit_value, commit_time)
+            value
+            (#{commit.opt_id}, #{commit.device_id}, #{commit.commit_value}, #{commit.commit_time});
+    </insert>
+
+    <delete id="deleteCommit">
+        delete from
+            commit
+        where
+            commit_id = #{commit_id};
+    </delete>
+</mapper>

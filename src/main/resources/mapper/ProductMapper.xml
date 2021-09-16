@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.brisk.farm_serve.mbg.mapper.ProductMapper">
+    <insert id="insertProduct">
+        insert into
+            product (product_id, product_name, birth_day, area_id)
+        value
+            (#{product.product_id}, #{product.product_name}, #{product.birth_day}, #{product.area_id});
+    </insert>
+
+    <delete id="deleteProduct">
+        delete from
+            product
+        where
+            product_id = #{product_id};
+    </delete>
+
+    <select id="getProductById" resultType="com.brisk.farm_serve.entity.Product">
+        select * from product where product_id = #{product_id};
+    </select>
+
+</mapper>

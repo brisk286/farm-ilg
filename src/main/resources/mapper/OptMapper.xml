@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.brisk.farm_serve.mbg.mapper.OptMapper">
+
+    <select id="getOptById" resultType="com.brisk.farm_serve.entity.Opt">
+        select * from opt where opt_id = #{opt_id};
+    </select>
+
+    <select id="getOptByCls" resultType="com.brisk.farm_serve.entity.Opt">
+        select * from opt where opt_cls = #{opt_cls};
+    </select>
+
+    <insert id="insertOpt">
+        insert into
+            opt (opt_id, opt_cls, opt_time, area_id)
+        value
+            (#{opt.opt_id}, #{opt.opt_cls}, #{opt.opt_time}, #{opt.area_id});
+    </insert>
+
+    <delete id="deleteOpt">
+        delete from
+            opt
+        where
+            opt_id = #{opt_id};
+    </delete>
+
+</mapper>
