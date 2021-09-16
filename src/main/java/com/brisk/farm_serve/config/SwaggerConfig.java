@@ -37,7 +37,7 @@ public class SwaggerConfig {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 // 标题
-                .title("接口文档1111")
+                .title("接口文档")
                 // 接口描述
                 .description("云上稻香智慧农业管理平台——brisk")
                 // 版本信息
