@@ -46,7 +46,7 @@ jobs:
         uses: fifsky/ssh-action@master
         with:
           command: | # 命令中的 & 表示在后台运行进程
-            cd ../home/Farm-ilg/ && java -jar github-actions-springboot.jar &
+            cd ../home/Farm-ilg/ && java -jar farm_serve-0.0.1-SNAPSHOT.jar &
           host: ${{ secrets.HOST }}
           user: ${{ secrets.SSH_USER }}
           pass: ${{ secrets.SSH_PASSWORD }}
