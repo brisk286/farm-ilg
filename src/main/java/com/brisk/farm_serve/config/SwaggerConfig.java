@@ -39,7 +39,7 @@ public class SwaggerConfig {
                 // 标题
                 .title("接口文档")
                 // 接口描述
-                .description("云上稻香智慧农业管理平台——brisk")
+                .description("云上稻香智慧农业管理平台—brisk")
                 // 版本信息
                 .version("1.0")
                 // 构建
