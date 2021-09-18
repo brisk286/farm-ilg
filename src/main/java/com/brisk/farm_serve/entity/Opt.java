@@ -19,4 +19,7 @@ public class Opt {
 
     @ApiModelProperty(value = "操作地块")
     private Long area_id;
+
+    @ApiModelProperty(value = "操作执行人")
+    private Long opt_excter;
 }

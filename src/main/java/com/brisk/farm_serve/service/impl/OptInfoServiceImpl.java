@@ -1,16 +1,21 @@
 package com.brisk.farm_serve.service.impl;
 
 import com.brisk.farm_serve.entity.Opt;
+import com.brisk.farm_serve.entity.Plan;
+import com.brisk.farm_serve.mbg.mapper.OptMapper;
 import com.brisk.farm_serve.service.OptInfoService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 @Service
 public class OptInfoServiceImpl implements OptInfoService {
 
     @Resource
-    OptInfoService optInfoService;
+    OptMapper optMapper;
 
     @Override
     public Opt getOptById(Long opt_id) {
@@ -30,5 +35,27 @@ public class OptInfoServiceImpl implements OptInfoService {
     @Override
     public Opt getOptByCls(String opt_cls) {
         return null;
+    }
+
+    @Override
+    public ArrayList<Plan> getFuturePlan() {
+//        Long datetime = System.currentTimeMillis();
+//        Timestamp timestamp = new Timestamp(datetime);
+//        ArrayList<Opt> opts = optMapper.getFuturePlan();
+//        ArrayList<Plan> plans = new ArrayList<>();
+//        Iterator<Opt> it = opts.iterator();
+//
+//        while(it.hasNext()) {
+//            Opt opt = it.next();
+//            Plan plan = new Plan(opt.getOpt_excter().toString(), "计划编号：" + opt.getOpt_id() + " 操作：" + opt.getOpt_cls() + " 时间：" +
+//                    opt.getOpt_time() + " 负责地块：" + opt.getArea_id());
+//            plan.setName(opt.getOpt_excter().toString());
+//            plan.setContent("计划编号：" + opt.getOpt_id() + " 操作：" + opt.getOpt_cls() + " 时间：" +
+//                            opt.getOpt_time() + " 负责地块：" + opt.getArea_id());
+//            plans.add(plan);
+//        }
+
+//        return plans;
+        return optMapper.getFuturePlan();
     }
 }

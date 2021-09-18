@@ -25,4 +25,7 @@
             opt_id = #{opt_id};
     </delete>
 
+    <select id="getFuturePlan" resultType="com.brisk.farm_serve.entity.Plan">
+        select * from plan;
+    </select>
 </mapper>
