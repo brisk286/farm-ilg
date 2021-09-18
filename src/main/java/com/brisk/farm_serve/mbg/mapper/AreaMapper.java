@@ -18,6 +18,8 @@ public interface AreaMapper {
 
     ArrayList<Area> getAreaByCls(@Param("area_cls") String area_cls);
 
+    ArrayList<Area> getAreaByFarmId(@Param("farm_id") Long farm_id);
+
     void insertArea(@Param("area") Area area);
 
     void deleteArea(@Param("user_id") Long user_id);

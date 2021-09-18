@@ -26,8 +26,13 @@
              WHERE user.user_id = #{user_id} AND user.farm_id = area.farm_id)
         AND device.is_run = 1;
     </select>
+
     <select id="getAreaByCls" resultType="com.brisk.farm_serve.entity.Area">
         SELECT * FROM area WHERE area.product_cls = #{area_cls};
+    </select>
+
+    <select id="getAreaByFarmId" resultType="com.brisk.farm_serve.entity.Area">
+        SELECT * FROM area WHERE area.farm_id = #{farm_id};
     </select>
 
 </mapper>

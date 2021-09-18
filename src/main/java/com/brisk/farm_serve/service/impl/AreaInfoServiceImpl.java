@@ -9,6 +9,9 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.TreeSet;
 
 @Service
 public class AreaInfoServiceImpl implements AreaInfoService {
@@ -18,7 +21,7 @@ public class AreaInfoServiceImpl implements AreaInfoService {
 
     @Override
     public Area getAreaById(Long area_id) {
-        return null;
+        return areaMapper.getAreaById(area_id);
     }
 
     @Override
@@ -48,6 +51,11 @@ public class AreaInfoServiceImpl implements AreaInfoService {
 
     @Override
     public ArrayList<Area> getAreaByCls(String area_cls) {
-        return null;
+        return areaMapper.getAreaByCls(area_cls);
+    }
+
+    @Override
+    public ArrayList<Area> getAreaByFarmId(Long farm_id) {
+        return areaMapper.getAreaByFarmId(farm_id);
     }
 }

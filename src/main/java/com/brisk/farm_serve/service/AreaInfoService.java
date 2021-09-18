@@ -23,4 +23,6 @@ public interface AreaInfoService {
     ArrayList<Device> getRunDeviceByUser(Long user_id);
 
     ArrayList<Area> getAreaByCls(String area_cls);
+
+    ArrayList<Area> getAreaByFarmId(Long farm_id);
 }

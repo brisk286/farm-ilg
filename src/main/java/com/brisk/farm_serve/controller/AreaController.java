@@ -69,4 +69,11 @@ public class AreaController {
         ArrayList<Area> areas = areaInfoService.getAreaByCls(area_cls);
         return CommonResult.success(areas);
     }
+
+    @GetMapping(value = "/farm/{farm_id}")
+    @ApiOperation(value = "查询不同区域地块")
+    public CommonResult<ArrayList<Area>> getAreaByFarmId(@PathVariable(value = "farm_id") Long farm_id){
+        ArrayList<Area> areas = areaInfoService.getAreaByFarmId(farm_id);
+        return CommonResult.success(areas);
+    }
 }
