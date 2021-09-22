@@ -5,17 +5,15 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @SpringBootTest
 class FarmServeApplicationTests {
 
     @Test
     void contextLoads() {
-        Long datetime = System.currentTimeMillis();
-        System.out.println(datetime);
-        Timestamp timestamp = new Timestamp(datetime);
-        System.out.println(timestamp);
-        System.out.println(timestamp);
+        Date date = new Date(System.currentTimeMillis());
+        System.out.println(date);
     }
 
 }
