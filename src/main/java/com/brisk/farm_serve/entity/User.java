@@ -1,25 +1,41 @@
 package com.brisk.farm_serve.entity;
 
+import com.brisk.farm_serve.mbg.mapper.RoleMapper;
+import com.brisk.farm_serve.representation.UserRepresentation;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
+import lombok.*;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class User {
 
-    @ApiModelProperty(value = "用户id")
+    // 主键由数据库自动生成
+
     private Long user_id;
 
-    @ApiModelProperty(value = "用户名")
     private String user_name;
 
-    @ApiModelProperty(value = "密码")
     private String password;
 
-    @ApiModelProperty(value = "使用的农场id")
     private Long farm_id;
 
-    @ApiModelProperty(value = "角色")
-    private String role;
+    private String full_name;
+
+    private Boolean enable;
+
+
+    public UserRepresentation toUserRepresentation() {
+        return UserRepresentation.builder().fullName(this.full_name)
+                .userName(this.user_name).build();
+    }
 
 }

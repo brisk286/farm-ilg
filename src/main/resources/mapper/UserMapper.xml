@@ -3,8 +3,34 @@
 
 <mapper namespace="com.brisk.farm_serve.mbg.mapper.UserMapper">
 
-    <select id="getUserById" resultType="com.brisk.farm_serve.entity.User">
+    <select id="getUserByUserId" resultType="com.brisk.farm_serve.entity.User">
         select * from user where user_id = #{user_id};
     </select>
+
+    <select id="getUserByUserName" resultType="com.brisk.farm_serve.entity.User">
+        select user_id, user_name, password, farm_id, full_name, enable from user where user_name = #{user_name};
+    </select>
+
+<!--  设置返回主键属性为：userId  -->
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="userId">
+        insert into
+            user (user_name, password, full_name)
+            values
+            (#{user.userName}, #{user.password}, #{user.fullName});
+    </insert>
+
+    <select id="getIdByUserName" resultType="java.lang.Long">
+        select user_id from user where user_name = #{user_name};
+    </select>
+
+    <select id="findAllUser" resultType="com.brisk.farm_serve.entity.User">
+        select * from user where user_name = #{user_name};
+    </select>
+
+    <select id="findUserWithPage" resultType="com.brisk.farm_serve.entity.User">
+        select user_id, user_name, password, farm_id, full_name, enable from user
+    </select>
+
+
 
 </mapper>

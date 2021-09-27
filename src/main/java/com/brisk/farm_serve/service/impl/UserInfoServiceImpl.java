@@ -16,6 +16,6 @@ public class UserInfoServiceImpl implements UserInfoService {
 
     @Override
     public User getUserById(Long user_id) {
-         return userMapper.getUserById(user_id);
+         return userMapper.getUserByUserId(user_id);
     }
 }
