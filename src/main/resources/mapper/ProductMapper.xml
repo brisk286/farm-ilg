@@ -16,7 +16,7 @@
             product_id = #{product_id};
     </delete>
 
-    <select id="getProductById" resultType="com.brisk.farm_serve.entity.Product">
+    <select id="getProductById" resultType="com.brisk.farm_serve.pojo.po.Product">
         select * from product where product_id = #{product_id};
     </select>
 

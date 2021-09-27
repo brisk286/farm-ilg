@@ -1,8 +1,6 @@
 package com.brisk.farm_serve.mbg.mapper;
 
-import com.brisk.farm_serve.entity.Commit;
-import com.brisk.farm_serve.entity.Device;
-import com.brisk.farm_serve.entity.Opt;
+import com.brisk.farm_serve.pojo.po.Device;
 import org.apache.ibatis.annotations.Param;
 
 public interface DeviceMapper {

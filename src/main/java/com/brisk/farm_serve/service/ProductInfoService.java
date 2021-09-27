@@ -1,7 +1,6 @@
 package com.brisk.farm_serve.service;
 
-import com.brisk.farm_serve.entity.Product;
-import org.springframework.stereotype.Service;
+import com.brisk.farm_serve.pojo.po.Product;
 
 public interface ProductInfoService {
 

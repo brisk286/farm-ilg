@@ -1,10 +1,6 @@
 package com.brisk.farm_serve.service;
 
-import com.brisk.farm_serve.entity.Device;
-import com.brisk.farm_serve.mbg.mapper.DeviceMapper;
-import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
+import com.brisk.farm_serve.pojo.po.Device;
 
 public interface DeviceInfoService {
 

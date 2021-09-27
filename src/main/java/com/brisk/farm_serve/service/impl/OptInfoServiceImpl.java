@@ -1,15 +1,13 @@
 package com.brisk.farm_serve.service.impl;
 
-import com.brisk.farm_serve.entity.Opt;
-import com.brisk.farm_serve.entity.Plan;
+import com.brisk.farm_serve.pojo.po.Opt;
+import com.brisk.farm_serve.pojo.po.Plan;
 import com.brisk.farm_serve.mbg.mapper.OptMapper;
 import com.brisk.farm_serve.service.OptInfoService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.sql.Timestamp;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 @Service
 public class OptInfoServiceImpl implements OptInfoService {

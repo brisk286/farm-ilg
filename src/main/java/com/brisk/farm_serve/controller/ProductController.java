@@ -1,16 +1,12 @@
 package com.brisk.farm_serve.controller;
 
-import com.brisk.farm_serve.entity.Opt;
-import com.brisk.farm_serve.entity.Product;
-import com.brisk.farm_serve.mbg.mapper.ProductMapper;
+import com.brisk.farm_serve.pojo.po.Product;
 import com.brisk.farm_serve.result.CommonResult;
 import com.brisk.farm_serve.service.ProductInfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import javax.annotation.Resource;
 
 @RestController
 @RequestMapping(value = "/product")

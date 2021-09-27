@@ -1,4 +1,4 @@
-package com.brisk.farm_serve.entity;
+package com.brisk.farm_serve.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;

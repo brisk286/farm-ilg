@@ -1,4 +1,4 @@
-package com.brisk.farm_serve.representation;
+package com.brisk.farm_serve.pojo.bo;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

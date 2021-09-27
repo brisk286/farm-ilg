@@ -1,12 +1,9 @@
 package com.brisk.farm_serve.mbg.mapper;
 
-import com.brisk.farm_serve.entity.User;
+import com.brisk.farm_serve.pojo.po.User;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface UserMapper {
 

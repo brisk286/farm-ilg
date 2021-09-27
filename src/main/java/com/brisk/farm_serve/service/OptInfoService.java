@@ -1,10 +1,8 @@
 package com.brisk.farm_serve.service;
 
-import com.brisk.farm_serve.entity.Opt;
-import com.brisk.farm_serve.entity.Plan;
-import org.springframework.stereotype.Service;
+import com.brisk.farm_serve.pojo.po.Opt;
+import com.brisk.farm_serve.pojo.po.Plan;
 
-import java.sql.Timestamp;
 import java.util.ArrayList;
 
 

@@ -1,6 +1,6 @@
 package com.brisk.farm_serve.service.impl;
 
-import com.brisk.farm_serve.entity.Product;
+import com.brisk.farm_serve.pojo.po.Product;
 import com.brisk.farm_serve.mbg.mapper.ProductMapper;
 import com.brisk.farm_serve.service.ProductInfoService;
 import org.springframework.stereotype.Service;

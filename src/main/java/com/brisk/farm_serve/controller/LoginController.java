@@ -1,8 +1,8 @@
 package com.brisk.farm_serve.controller;
 
 import com.brisk.farm_serve.constants.SecurityConstants;
-import com.brisk.farm_serve.request.LoginRequest;
-import com.brisk.farm_serve.request.UserRegisterRequest;
+import com.brisk.farm_serve.pojo.bo.LoginRequest;
+import com.brisk.farm_serve.pojo.bo.UserRegisterRequest;
 import com.brisk.farm_serve.result.CommonResult;
 import com.brisk.farm_serve.service.impl.AuthServiceImpl;
 import com.brisk.farm_serve.service.impl.UserServiceImpl;

@@ -1,8 +1,6 @@
 package com.brisk.farm_serve.service;
 
-import com.brisk.farm_serve.entity.Commit;
-import com.brisk.farm_serve.entity.Device;
-import org.springframework.stereotype.Service;
+import com.brisk.farm_serve.pojo.po.Commit;
 
 import java.sql.Timestamp;
 

@@ -3,11 +3,11 @@
 
 <mapper namespace="com.brisk.farm_serve.mbg.mapper.OptMapper">
 
-    <select id="getOptById" resultType="com.brisk.farm_serve.entity.Opt">
+    <select id="getOptById" resultType="com.brisk.farm_serve.pojo.po.Opt">
         select * from opt where opt_id = #{opt_id};
     </select>
 
-    <select id="getOptByCls" resultType="com.brisk.farm_serve.entity.Opt">
+    <select id="getOptByCls" resultType="com.brisk.farm_serve.pojo.po.Opt">
         select * from opt where opt_cls = #{opt_cls};
     </select>
 
@@ -25,7 +25,7 @@
             opt_id = #{opt_id};
     </delete>
 
-    <select id="getFuturePlan" resultType="com.brisk.farm_serve.entity.Plan">
+    <select id="getFuturePlan" resultType="com.brisk.farm_serve.pojo.po.Plan">
         select * from plan;
     </select>
 </mapper>

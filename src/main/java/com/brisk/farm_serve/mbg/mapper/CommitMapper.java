@@ -1,8 +1,6 @@
 package com.brisk.farm_serve.mbg.mapper;
 
-import com.brisk.farm_serve.entity.Area;
-import com.brisk.farm_serve.entity.Commit;
-import com.brisk.farm_serve.entity.Device;
+import com.brisk.farm_serve.pojo.po.Commit;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.web.bind.annotation.PathVariable;
 

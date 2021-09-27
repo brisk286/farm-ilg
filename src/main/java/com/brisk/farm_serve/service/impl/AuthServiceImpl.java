@@ -1,10 +1,9 @@
 package com.brisk.farm_serve.service.impl;
 
-import com.brisk.farm_serve.entity.JwtUser;
-import com.brisk.farm_serve.request.LoginRequest;
-import com.brisk.farm_serve.entity.User;
+import com.brisk.farm_serve.pojo.bo.JwtUser;
+import com.brisk.farm_serve.pojo.bo.LoginRequest;
+import com.brisk.farm_serve.pojo.po.User;
 import com.brisk.farm_serve.service.AuthService;
-import com.brisk.farm_serve.service.impl.UserServiceImpl;
 import com.brisk.farm_serve.util.CurrentUserUtils;
 import com.brisk.farm_serve.util.JwtTokenUtils;
 import org.springframework.data.redis.core.StringRedisTemplate;

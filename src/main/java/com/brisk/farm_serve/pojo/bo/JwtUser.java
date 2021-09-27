@@ -1,5 +1,6 @@
-package com.brisk.farm_serve.entity;
+package com.brisk.farm_serve.pojo.bo;
 
+import com.brisk.farm_serve.pojo.po.User;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;

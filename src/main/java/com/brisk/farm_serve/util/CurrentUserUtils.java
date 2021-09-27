@@ -1,6 +1,6 @@
 package com.brisk.farm_serve.util;
 
-import com.brisk.farm_serve.entity.User;
+import com.brisk.farm_serve.pojo.po.User;
 import com.brisk.farm_serve.service.impl.UserServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

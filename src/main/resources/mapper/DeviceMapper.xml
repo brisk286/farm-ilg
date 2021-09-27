@@ -3,7 +3,7 @@
 
 <mapper namespace="com.brisk.farm_serve.mbg.mapper.DeviceMapper">
 
-    <select id="getDeviceById" resultType="com.brisk.farm_serve.entity.Device">
+    <select id="getDeviceById" resultType="com.brisk.farm_serve.pojo.po.Device">
         select * from device where device_id = #{device_id};
     </select>
 

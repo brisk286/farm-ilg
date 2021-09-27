@@ -1,6 +1,6 @@
-package com.brisk.farm_serve.request;
+package com.brisk.farm_serve.pojo.bo;
 
-import com.brisk.farm_serve.entity.User;
+import com.brisk.farm_serve.pojo.po.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

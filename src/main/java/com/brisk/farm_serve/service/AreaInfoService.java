@@ -1,10 +1,7 @@
 package com.brisk.farm_serve.service;
 
-import com.brisk.farm_serve.entity.Area;
-import com.brisk.farm_serve.entity.Device;
-import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
+import com.brisk.farm_serve.pojo.po.Area;
+import com.brisk.farm_serve.pojo.po.Device;
 
 import java.util.ArrayList;
 

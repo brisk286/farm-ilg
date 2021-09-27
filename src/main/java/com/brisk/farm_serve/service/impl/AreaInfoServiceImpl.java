@@ -1,17 +1,13 @@
 package com.brisk.farm_serve.service.impl;
 
-import com.brisk.farm_serve.entity.Area;
-import com.brisk.farm_serve.entity.Device;
+import com.brisk.farm_serve.pojo.po.Area;
+import com.brisk.farm_serve.pojo.po.Device;
 import com.brisk.farm_serve.mbg.mapper.AreaMapper;
 import com.brisk.farm_serve.service.AreaInfoService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.TreeSet;
 
 @Service
 public class AreaInfoServiceImpl implements AreaInfoService {

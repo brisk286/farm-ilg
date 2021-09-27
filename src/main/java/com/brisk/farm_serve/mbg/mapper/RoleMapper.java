@@ -1,10 +1,7 @@
 package com.brisk.farm_serve.mbg.mapper;
 
-import com.brisk.farm_serve.entity.Role;
-import com.brisk.farm_serve.entity.User;
+import com.brisk.farm_serve.pojo.po.Role;
 import org.apache.ibatis.annotations.Param;
-
-import java.util.Optional;
 
 public interface RoleMapper {
 

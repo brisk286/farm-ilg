@@ -1,8 +1,7 @@
 package com.brisk.farm_serve.controller;
 
-import com.brisk.farm_serve.entity.Area;
-import com.brisk.farm_serve.entity.Device;
-import com.brisk.farm_serve.mbg.mapper.AreaMapper;
+import com.brisk.farm_serve.pojo.po.Area;
+import com.brisk.farm_serve.pojo.po.Device;
 import com.brisk.farm_serve.result.CommonResult;
 import com.brisk.farm_serve.service.AreaInfoService;
 import io.swagger.annotations.Api;
@@ -10,7 +9,6 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
 import java.util.ArrayList;
 
 @RestController

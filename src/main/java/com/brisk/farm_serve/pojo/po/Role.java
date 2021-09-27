@@ -1,5 +1,6 @@
-package com.brisk.farm_serve.entity;
+package com.brisk.farm_serve.pojo.po;
 
+import com.brisk.farm_serve.pojo.AbstractAuditBase;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

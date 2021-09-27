@@ -1,10 +1,9 @@
-package com.brisk.farm_serve.entity;
+package com.brisk.farm_serve.pojo.bo;
 
 import lombok.Data;
 
 import java.util.List;
 
-import java.util.List;
 /**
  * 分页返回结果
  */

@@ -2,9 +2,6 @@ package com.brisk.farm_serve.util;
 
 
 import com.brisk.farm_serve.constants.SecurityConstants;
-import com.brisk.farm_serve.entity.JwtUser;
-import com.brisk.farm_serve.entity.User;
-import com.brisk.farm_serve.mbg.mapper.UserRoleMapper;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -12,7 +9,6 @@ import io.jsonwebtoken.security.Keys;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
-import javax.annotation.Resource;
 import javax.crypto.SecretKey;
 import javax.xml.bind.DatatypeConverter;
 import java.util.Arrays;

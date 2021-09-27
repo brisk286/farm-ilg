@@ -1,7 +1,7 @@
 package com.brisk.farm_serve.mbg.mapper;
 
-import com.brisk.farm_serve.entity.Area;
-import com.brisk.farm_serve.entity.Device;
+import com.brisk.farm_serve.pojo.po.Area;
+import com.brisk.farm_serve.pojo.po.Device;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.ArrayList;

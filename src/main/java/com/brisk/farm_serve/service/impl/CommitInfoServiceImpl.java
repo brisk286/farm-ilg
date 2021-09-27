@@ -1,6 +1,6 @@
 package com.brisk.farm_serve.service.impl;
 
-import com.brisk.farm_serve.entity.Commit;
+import com.brisk.farm_serve.pojo.po.Commit;
 import com.brisk.farm_serve.service.CommitInfoService;
 import org.springframework.stereotype.Service;
 

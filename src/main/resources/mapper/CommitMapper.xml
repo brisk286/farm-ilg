@@ -3,11 +3,11 @@
 
 <mapper namespace="com.brisk.farm_serve.mbg.mapper.CommitMapper">
 
-    <select id="getCommitById" resultType="com.brisk.farm_serve.entity.Commit">
+    <select id="getCommitById" resultType="com.brisk.farm_serve.pojo.po.Commit">
         select * from commit where commit_id = #{commit_id};
     </select>
 
-    <select id="getCommitInTime" resultType="com.brisk.farm_serve.entity.Commit">
+    <select id="getCommitInTime" resultType="com.brisk.farm_serve.pojo.po.Commit">
 
 
     </select>

@@ -1,9 +1,9 @@
 package com.brisk.farm_serve.service;
 
-import com.brisk.farm_serve.entity.PageRequest;
-import com.brisk.farm_serve.entity.PageResult;
-import com.brisk.farm_serve.entity.User;
-import com.brisk.farm_serve.request.UserRegisterRequest;
+import com.brisk.farm_serve.pojo.bo.PageRequest;
+import com.brisk.farm_serve.pojo.bo.PageResult;
+import com.brisk.farm_serve.pojo.po.User;
+import com.brisk.farm_serve.pojo.bo.UserRegisterRequest;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import java.util.List;

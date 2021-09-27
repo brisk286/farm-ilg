@@ -1,4 +1,4 @@
-package com.brisk.farm_serve.request;
+package com.brisk.farm_serve.pojo.bo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

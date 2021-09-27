@@ -1,12 +1,9 @@
 package com.brisk.farm_serve.mbg.mapper;
 
-import com.brisk.farm_serve.entity.Area;
-import com.brisk.farm_serve.entity.Opt;
-import com.brisk.farm_serve.entity.Plan;
-import com.brisk.farm_serve.entity.Product;
+import com.brisk.farm_serve.pojo.po.Opt;
+import com.brisk.farm_serve.pojo.po.Plan;
 import org.apache.ibatis.annotations.Param;
 
-import java.sql.Timestamp;
 import java.util.ArrayList;
 
 public interface OptMapper {

@@ -1,8 +1,6 @@
 package com.brisk.farm_serve.mbg.mapper;
 
-import com.brisk.farm_serve.entity.Commit;
-import com.brisk.farm_serve.entity.Product;
-import com.brisk.farm_serve.entity.User;
+import com.brisk.farm_serve.pojo.po.Product;
 import org.apache.ibatis.annotations.Param;
 
 public interface ProductMapper {

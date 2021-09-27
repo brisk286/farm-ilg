@@ -1,15 +1,7 @@
-package com.brisk.farm_serve.entity;
+package com.brisk.farm_serve.pojo.po;
 
-import com.brisk.farm_serve.mbg.mapper.RoleMapper;
-import com.brisk.farm_serve.representation.UserRepresentation;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import io.swagger.annotations.ApiModelProperty;
+import com.brisk.farm_serve.pojo.bo.UserRepresentation;
 import lombok.*;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
 
 
 @Data

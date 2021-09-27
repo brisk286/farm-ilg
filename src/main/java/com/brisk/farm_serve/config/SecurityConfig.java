@@ -24,8 +24,10 @@ import java.util.Collections;
 import static org.springframework.security.config.Customizer.withDefaults;
 
 
-// 使用表达式时间方法级别的安全性 4个注解可用
-@EnableWebSecurity
+/**
+ * SpringSecurity 配置
+ */
+@EnableWebSecurity          // 使用表达式时间方法级别的安全性 4个注解可用
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 

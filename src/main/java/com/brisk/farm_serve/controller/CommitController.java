@@ -1,6 +1,6 @@
 package com.brisk.farm_serve.controller;
 
-import com.brisk.farm_serve.entity.Commit;
+import com.brisk.farm_serve.pojo.po.Commit;
 import com.brisk.farm_serve.result.CommonResult;
 import com.brisk.farm_serve.service.CommitInfoService;
 import io.swagger.annotations.Api;
