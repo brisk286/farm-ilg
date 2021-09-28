@@ -7,7 +7,7 @@ public enum RoleType {
     USER("USER", "用户"),
     TEMP_USER("TEMP_USER", "临时用户"),
     MANAGER("MANAGER", "管理者"),
-    ADMIN("ADMIN", "Admin");
+    ADMIN("ADMIN", "管理员");
     private final String name;
     private final String description;
 

@@ -1,7 +1,7 @@
 package com.brisk.farm_serve.controller;
 
+import com.brisk.farm_serve.pojo.dto.NextDayPlan;
 import com.brisk.farm_serve.pojo.po.Opt;
-import com.brisk.farm_serve.pojo.po.Plan;
 import com.brisk.farm_serve.result.CommonResult;
 import com.brisk.farm_serve.service.OptInfoService;
 import io.swagger.annotations.Api;
@@ -26,7 +26,7 @@ public class OptController {
         return CommonResult.success(opt);
     }
 
-    @PostMapping
+    @PostMapping(value = "/insert")
     @ApiOperation(value = "添加操作")
     public CommonResult<Object> insertOpt(@RequestBody Opt opt){
         optInfoService.insertOpt(opt);
@@ -48,9 +48,9 @@ public class OptController {
     }
 
     @GetMapping(value = "/plan")
-    @ApiOperation(value = "查询未来计划的操作")
-    public CommonResult<ArrayList<Plan>> getFuturePlan(){
-        ArrayList<Plan> plans = optInfoService.getFuturePlan();
+    @ApiOperation(value = "查询未来一天的操作")
+    public CommonResult<ArrayList<NextDayPlan>> getFuturePlan(){
+        ArrayList<NextDayPlan> plans = optInfoService.getFuturePlan();
         return CommonResult.success(plans);
     }
 }

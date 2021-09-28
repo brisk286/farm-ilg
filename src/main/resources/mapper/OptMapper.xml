@@ -11,11 +11,11 @@
         select * from opt where opt_cls = #{opt_cls};
     </select>
 
-    <insert id="insertOpt">
+    <insert id="insertOpt" useGeneratedKeys="true" keyProperty="opt_id">
         insert into
-            opt (opt_id, opt_cls, opt_time, area_id)
-        value
-            (#{opt.opt_id}, #{opt.opt_cls}, #{opt.opt_time}, #{opt.area_id});
+            opt (opt_id, opt_cls, opt_time, area_id, opt_excter)
+        values
+            (#{opt.opt_id}, #{opt.opt_cls}, #{opt.opt_time}, #{opt.area_id}, #{opt.opt_excter});
     </insert>
 
     <delete id="deleteOpt">
@@ -25,7 +25,18 @@
             opt_id = #{opt_id};
     </delete>
 
-    <select id="getFuturePlan" resultType="com.brisk.farm_serve.pojo.po.Plan">
-        select * from plan;
+    <select id="getFuturePlan" resultType="com.brisk.farm_serve.pojo.dto.NextDayPlan">
+        SELECT
+            opt_time AS planTime,
+            opt_cls AS planName,
+            opt_excter AS planExecutor,
+            area_id AS planArea
+        FROM
+            opt
+        WHERE
+            opt_time > STR_TO_DATE(#{currentTime},'%Y-%m-%d %H:%i:%s')
+        AND
+            opt_time &lt; STR_TO_DATE(#{nextDayTime},'%Y-%m-%d %H:%i:%s');
     </select>
+
 </mapper>

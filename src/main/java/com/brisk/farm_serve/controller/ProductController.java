@@ -16,9 +16,9 @@ public class ProductController {
     @Autowired
     private ProductInfoService productInfoService;
 
-    @GetMapping(value = "/{prodect_id}")
+    @GetMapping(value = "/{product_id}")
     @ApiOperation(value = "查询农产品")
-    public CommonResult<Product> getProductById(@PathVariable(value = "prodect_id") Long product_id) {
+    public CommonResult<Product> getProductById(@PathVariable(value = "product_id") Long product_id) {
         Product product = productInfoService.getProductById(product_id);
         return CommonResult.success(product);
     }

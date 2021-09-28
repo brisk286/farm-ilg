@@ -1,9 +1,10 @@
 package com.brisk.farm_serve.mbg.mapper;
 
+import com.brisk.farm_serve.pojo.dto.NextDayPlan;
 import com.brisk.farm_serve.pojo.po.Opt;
-import com.brisk.farm_serve.pojo.po.Plan;
 import org.apache.ibatis.annotations.Param;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 
 public interface OptMapper {
@@ -16,7 +17,7 @@ public interface OptMapper {
 
     void deleteOpt(@Param("opt_id") Long opt_id);
 
-//    ArrayList<Opt> getFuturePlan(@Param("cur_time") Timestamp cur_time);
-    ArrayList<Plan> getFuturePlan();
+//    ArrayList<NextDayPlan> getFuturePlan(@Param("currentTime") String currentTime, @Param("nextDayTime") String nextDayTime);
+    ArrayList<NextDayPlan> getFuturePlan(@Param("currentTime") String currentTime, @Param("nextDayTime") String nextDayTime);
 
 }

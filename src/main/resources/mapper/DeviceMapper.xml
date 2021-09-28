@@ -10,7 +10,7 @@
     <insert id="insertDevice">
         insert into
             device (device_id, device_name, device_system, device_value, last_time, dur_time, area_id, is_run, is_wrong, ser_number, elec_value, net_condition)
-        value
+        values
             (#{device.device_id}, #{device.device_name}, #{device.device_system}, #{device.device_value}, #{device.last_time}, #{device.dur_time}, #{device.area_id}, #{device.is_run}, #{device.is_wrong}, #{device.ser_number}, #{device.elec_value}, #{device.net_condition});
     </insert>
 

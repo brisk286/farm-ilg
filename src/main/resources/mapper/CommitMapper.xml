@@ -15,7 +15,7 @@
     <insert id="insertCommit">
         insert into
             commit (commit_id, device_id, commit_value, commit_time)
-            value
+            values
             (#{commit.opt_id}, #{commit.device_id}, #{commit.commit_value}, #{commit.commit_time});
     </insert>
 

@@ -1,7 +1,7 @@
 package com.brisk.farm_serve.service;
 
+import com.brisk.farm_serve.pojo.dto.NextDayPlan;
 import com.brisk.farm_serve.pojo.po.Opt;
-import com.brisk.farm_serve.pojo.po.Plan;
 
 import java.util.ArrayList;
 
@@ -16,5 +16,5 @@ public interface OptInfoService{
 
     Opt getOptByCls(String opt_cls);
 
-    ArrayList<Plan> getFuturePlan();
+    ArrayList<NextDayPlan> getFuturePlan();
 }

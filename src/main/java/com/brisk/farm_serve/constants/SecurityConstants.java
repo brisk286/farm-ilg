@@ -46,10 +46,11 @@ public final class SecurityConstants {
 
     // System WHITELIST
     public static final String[] SYSTEM_WHITELIST = {
-//            "/auth/register",
-//            "/auth/login"
-            "/auth/*",
-            "/user/*"
+            "/auth/register",
+            "/auth/login",
+//            "/*"
+            "/opt/*",
+            "/product/*"
     };
 
     private SecurityConstants() {

@@ -21,5 +21,5 @@ public class Opt {
     private Long area_id;
 
     @ApiModelProperty(value = "操作执行人")
-    private Long opt_excter;
+    private String opt_excter;
 }

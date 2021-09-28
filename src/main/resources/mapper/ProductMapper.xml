@@ -5,7 +5,7 @@
     <insert id="insertProduct">
         insert into
             product (product_id, product_name, birth_day, area_id)
-        value
+        values
             (#{product.product_id}, #{product.product_name}, #{product.birth_day}, #{product.area_id});
     </insert>
 
