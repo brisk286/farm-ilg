@@ -12,9 +12,9 @@ public interface AreaMapper {
 
     ArrayList<Area> getAreaByUserId(@Param("user_id") Long user_id);
 
-    ArrayList<Device> getWrongDeviceByUser(@Param("user_id") Long user_id);
+    ArrayList<Device> getWrongDeviceByUserId(@Param("user_id") Long user_id);
 
-    ArrayList<Device> getRunDeviceByUser(@Param("user_id") Long user_id);
+    ArrayList<Device> getRunDeviceByUserId(@Param("user_id") Long user_id);
 
     ArrayList<Area> getAreaByCls(@Param("area_cls") String area_cls);
 

@@ -1,4 +1,4 @@
-package com.brisk.farm_serve.pojo.bo;
+package com.brisk.farm_serve.pojo.dto;
 
 import lombok.Data;
 

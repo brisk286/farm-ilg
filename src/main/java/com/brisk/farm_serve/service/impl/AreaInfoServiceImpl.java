@@ -4,6 +4,7 @@ import com.brisk.farm_serve.pojo.po.Area;
 import com.brisk.farm_serve.pojo.po.Device;
 import com.brisk.farm_serve.mbg.mapper.AreaMapper;
 import com.brisk.farm_serve.service.AreaInfoService;
+import com.brisk.farm_serve.util.CurrentUserUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -14,6 +15,9 @@ public class AreaInfoServiceImpl implements AreaInfoService {
 
     @Resource
     AreaMapper areaMapper;
+
+    @Resource
+    CurrentUserUtils currentUserUtils;
 
     @Override
     public Area getAreaById(Long area_id) {
@@ -31,18 +35,18 @@ public class AreaInfoServiceImpl implements AreaInfoService {
     }
 
     @Override
-    public ArrayList<Area> getAreaByUserId(Long user_id) {
-        return areaMapper.getAreaByUserId(user_id);
+    public ArrayList<Area> getAreaByUserId() {
+        return areaMapper.getAreaByUserId(currentUserUtils.getCurrentUser().getUser_id());
     }
 
     @Override
-    public ArrayList<Device> getWrongDeviceByUser(Long user_id) {
-        return areaMapper.getWrongDeviceByUser(user_id);
+    public ArrayList<Device> getWrongDeviceByUserId() {
+        return areaMapper.getWrongDeviceByUserId(currentUserUtils.getCurrentUser().getUser_id());
     }
 
     @Override
-    public ArrayList<Device> getRunDeviceByUser(Long user_id) {
-        return areaMapper.getRunDeviceByUser(user_id);
+    public ArrayList<Device> getRunDeviceByUserId() {
+        return areaMapper.getRunDeviceByUserId(currentUserUtils.getCurrentUser().getUser_id());
     }
 
     @Override

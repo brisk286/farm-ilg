@@ -1,7 +1,7 @@
 package com.brisk.farm_serve.util;
 
 import com.brisk.farm_serve.pojo.bo.PageRequest;
-import com.brisk.farm_serve.pojo.bo.PageResult;
+import com.brisk.farm_serve.pojo.dto.PageResult;
 import com.github.pagehelper.PageInfo;
 
 public class PageUtils {

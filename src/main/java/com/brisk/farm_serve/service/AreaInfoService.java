@@ -13,11 +13,11 @@ public interface AreaInfoService {
 
     void deleteArea(Long area_id);
 
-    ArrayList<Area> getAreaByUserId(Long user_id);
+    ArrayList<Area> getAreaByUserId();
 
-    ArrayList<Device> getWrongDeviceByUser(Long user_id);
+    ArrayList<Device> getWrongDeviceByUserId();
 
-    ArrayList<Device> getRunDeviceByUser(Long user_id);
+    ArrayList<Device> getRunDeviceByUserId();
 
     ArrayList<Area> getAreaByCls(String area_cls);
 

@@ -19,45 +19,45 @@ public class AreaController {
     @Autowired
     private AreaInfoService areaInfoService;
 
-    @GetMapping(value = "/{area_id}")
-    @ApiOperation(value = "查询地块")
-    public CommonResult<Area> getAreaById(@PathVariable(value = "area_id") Long area_id){
-        Area area = areaInfoService.getAreaById(area_id);
-        return CommonResult.success(area);
-    }
+//    @GetMapping(value = "/{area_id}")
+//    @ApiOperation(value = "查询地块")
+//    public CommonResult<Area> getAreaById(@PathVariable(value = "area_id") Long area_id){
+//        Area area = areaInfoService.getAreaById(area_id);
+//        return CommonResult.success(area);
+//    }
+//
+//    @PostMapping
+//    @ApiOperation(value = "添加地块")
+//    public CommonResult<Object> insertArea(@RequestBody Area area){
+//        areaInfoService.insertArea(area);
+//        return CommonResult.success();
+//    }
+//
+//    @DeleteMapping(value = "/{area_id}")
+//    @ApiOperation(value = "删除地块")
+//    public CommonResult<Object> deleteArea(@PathVariable(value = "area_id") Long area_id){
+//        areaInfoService.deleteArea(area_id);
+//        return CommonResult.success();
+//    }
 
-    @PostMapping
-    @ApiOperation(value = "添加地块")
-    public CommonResult<Object> insertArea(@RequestBody Area area){
-        areaInfoService.insertArea(area);
-        return CommonResult.success();
-    }
-
-    @DeleteMapping(value = "/{area_id}")
-    @ApiOperation(value = "删除地块")
-    public CommonResult<Object> deleteArea(@PathVariable(value = "area_id") Long area_id){
-        areaInfoService.deleteArea(area_id);
-        return CommonResult.success();
-    }
-
-    @GetMapping(value = "/userOwn/{user_id}")
+    @GetMapping(value = "/userOwn")
     @ApiOperation(value = "查询用户拥有的地块")
-    public CommonResult<ArrayList<Area>> getAreaByUserId(@PathVariable(value = "user_id") Long user_id){
-        ArrayList<Area> areas = areaInfoService.getAreaByUserId(user_id);
+    public CommonResult<ArrayList<Area>> getAreaByUserId(){
+        ArrayList<Area> areas = areaInfoService.getAreaByUserId();
         return CommonResult.success(areas);
     }
 
-    @GetMapping(value = "/wrongDevice/{user_id}")
+    @GetMapping(value = "/wrongDevice")
     @ApiOperation(value = "查询用户的地块中损坏的设备")
-    public CommonResult<ArrayList<Device>> getWrongDeviceNumByUser(@PathVariable(value = "user_id") Long user_id){
-        ArrayList<Device> devices = areaInfoService.getWrongDeviceByUser(user_id);
+    public CommonResult<ArrayList<Device>> getWrongDeviceNumByUserId(){
+        ArrayList<Device> devices = areaInfoService.getWrongDeviceByUserId();
         return CommonResult.success(devices);
     }
 
-    @GetMapping(value = "/runDevice/{user_id}")
+    @GetMapping(value = "/runDevice")
     @ApiOperation(value = "查询用户拥有的地块中正在运行的设备")
-    public CommonResult<ArrayList<Device>> getRunDeviceNumByUser(@PathVariable(value = "user_id") Long user_id){
-        ArrayList<Device> devices = areaInfoService.getRunDeviceByUser(user_id);
+    public CommonResult<ArrayList<Device>> getRunDeviceNumByUserId(){
+        ArrayList<Device> devices = areaInfoService.getRunDeviceByUserId();
         return CommonResult.success(devices);
     }
 

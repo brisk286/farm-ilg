@@ -1,7 +1,7 @@
 package com.brisk.farm_serve.controller;
 
 import com.brisk.farm_serve.pojo.bo.PageRequest;
-import com.brisk.farm_serve.pojo.bo.PageResult;
+import com.brisk.farm_serve.pojo.dto.PageResult;
 import com.brisk.farm_serve.pojo.po.User;
 import com.brisk.farm_serve.result.CommonResult;
 import com.brisk.farm_serve.service.UserInfoService;
@@ -23,12 +23,12 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping(value = "/{user_id}")
-    @ApiOperation(value = "查询用户")
-    public CommonResult<User> getUserById(@PathVariable(value = "user_id") Long user_id){
-        User user = userInfoService.getUserById(user_id);
-        return CommonResult.success(user);
-    }
+//    @GetMapping(value = "/{user_id}")
+//    @ApiOperation(value = "查询用户")
+//    public CommonResult<User> getUserById(@PathVariable(value = "user_id") Long user_id){
+//        User user = userInfoService.getUserById(user_id);
+//        return CommonResult.success(user);
+//    }
 
     @GetMapping(value = "/findPage")
     @PreAuthorize("hasAnyRole('ROLE_USER','ROLE_MANAGER','ROLE_ADMIN')")

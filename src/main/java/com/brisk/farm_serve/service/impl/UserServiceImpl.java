@@ -1,7 +1,7 @@
 package com.brisk.farm_serve.service.impl;
 
 import com.brisk.farm_serve.pojo.bo.PageRequest;
-import com.brisk.farm_serve.pojo.bo.PageResult;
+import com.brisk.farm_serve.pojo.dto.PageResult;
 import com.brisk.farm_serve.pojo.po.User;
 import com.brisk.farm_serve.pojo.po.UserRole;
 import com.brisk.farm_serve.enums.RoleType;

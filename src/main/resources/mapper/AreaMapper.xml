@@ -13,14 +13,14 @@
           AND user.farm_id = area.farm_id;
     </select>
 
-    <select id="getWrongDeviceByUser" resultType="com.brisk.farm_serve.pojo.po.Device">
+    <select id="getWrongDeviceByUserId" resultType="com.brisk.farm_serve.pojo.po.Device">
         SELECT * FROM device WHERE device.area_id IN
             (SELECT area.area_id FROM `user`, `area`
             WHERE user.user_id = #{user_id} AND user.farm_id = area.farm_id)
         AND device.is_wrong = 0;
     </select>
 
-    <select id="getRunDeviceByUser" resultType="com.brisk.farm_serve.pojo.po.Device">
+    <select id="getRunDeviceByUserId" resultType="com.brisk.farm_serve.pojo.po.Device">
         SELECT * FROM device WHERE device.area_id IN
             (SELECT area.area_id FROM `user`, `area`
              WHERE user.user_id = #{user_id} AND user.farm_id = area.farm_id)
