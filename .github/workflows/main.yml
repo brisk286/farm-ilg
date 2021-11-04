@@ -1,4 +1,4 @@
-name: Tencent CI
+name: TencentCloud CI
 
 on:
   push:
