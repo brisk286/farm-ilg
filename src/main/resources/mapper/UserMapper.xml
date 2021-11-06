@@ -12,11 +12,11 @@
     </select>
 
 <!--  设置返回主键属性为：userId  -->
-    <insert id="insertUser" useGeneratedKeys="true" keyProperty="userId">
+    <insert id="insertUser" useGeneratedKeys="true">
         insert into
             user (user_name, password, full_name)
             values
-            (#{user.userName}, #{user.password}, #{user.fullName});
+            (#{user.user_name}, #{user.password}, #{user.full_name});
     </insert>
 
     <select id="getIdByUserName" resultType="java.lang.Long">

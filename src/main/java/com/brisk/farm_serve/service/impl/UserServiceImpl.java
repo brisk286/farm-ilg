@@ -46,7 +46,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public void save(UserRegisterRequest userRegisterRequest) {
         // 确保User不存在
-        ensureUserNameNotExist(userRegisterRequest.getUserName());
+        ensureUserNameNotExist(userRegisterRequest.getUser_name());
         // 从注册请求中创建User
         User user = userRegisterRequest.toUser();
         // user设置为加密密码

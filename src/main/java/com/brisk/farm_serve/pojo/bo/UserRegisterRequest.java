@@ -10,13 +10,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UserRegisterRequest {
 
-    private String userName;
+    private String user_name;
     private String password;
-    private String fullName;
+    private String full_name;
 
     public User toUser() {
-        return User.builder().full_name(this.getFullName())
-                .user_name(this.getUserName())
+        return User.builder().full_name(this.getFull_name())
+                .user_name(this.getUser_name())
                 .enable(true).build();
     }
 }
