@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.brisk.farm_serve.mbg.mapper.EmployeeMapper">
+
+    <select id="getEmployee" resultType="com.brisk.farm_serve.pojo.po.Employee">
+        select * from employee;
+    </select>
+
+    <select id="getEmployeeByName" resultType="com.brisk.farm_serve.pojo.po.Employee">
+        select * from employee
+        where employee_name like CONCAT('%',#{employee_name},'%');
+    </select>
+
+    <insert id="insertEmployee">
+        insert into
+        employee (employee_id, employee_name, employee_gender, employee_seq, employee_area, employee_state)
+        values
+        (#{employee.employee_id}, #{employee.employee_name}, #{employee.employee_gender}, #{employee.employee_seq}, #{employee.employee_area}, #{employee.employee_state});
+    </insert>
+
+    <delete id="deleteEmployee">
+        delete from
+        employee
+        where
+        employee_id = #{employee_id};
+    </delete>
+
+    <update id="updateEmployee">
+        update
+        employee set employee_name=#{employee.employee_name}, employee_gender=#{employee.employee_gender}, employee_seq=#{employee.employee_seq}, employee_area=#{employee.employee_area}, employee_state=#{employee.employee_state}
+        where
+        employee_id = #{employee.employee_id};
+    </update>
+
+</mapper>

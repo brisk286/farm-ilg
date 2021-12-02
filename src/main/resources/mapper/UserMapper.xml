@@ -8,15 +8,15 @@
     </select>
 
     <select id="getUserByUserName" resultType="com.brisk.farm_serve.pojo.po.User">
-        select user_id, user_name, password, farm_id, full_name, enable from user where user_name = #{user_name};
+        select * from user where user_name = #{user_name};
     </select>
 
 <!--  设置返回主键属性为：userId  -->
     <insert id="insertUser" useGeneratedKeys="true">
         insert into
-            user (user_name, password, full_name)
+            user (user_name, password, enable, phone_number, email)
             values
-            (#{user.user_name}, #{user.password}, #{user.full_name});
+            (#{user.user_name}, #{user.password}, #{user.enable}, #{user.phone_number}, #{user.email});
     </insert>
 
     <select id="getIdByUserName" resultType="java.lang.Long">
@@ -28,7 +28,7 @@
     </select>
 
     <select id="findUserWithPage" resultType="com.brisk.farm_serve.pojo.po.User">
-        select user_id, user_name, password, farm_id, full_name, enable from user
+        select * from user
     </select>
 
 

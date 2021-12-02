@@ -2,6 +2,7 @@ package com.brisk.farm_serve.util;
 
 
 import com.brisk.farm_serve.constants.SecurityConstants;
+import com.brisk.farm_serve.pojo.po.Role;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -11,6 +12,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import javax.crypto.SecretKey;
 import javax.xml.bind.DatatypeConverter;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -79,7 +81,13 @@ public class JwtTokenUtils {
 
     private static List<SimpleGrantedAuthority> getAuthorities(Claims claims) {
         String role = (String) claims.get(SecurityConstants.ROLE_CLAIMS);
-        // 转换成流 https://blog.csdn.net/piglite/article/details/53823584
+//        List<SimpleGrantedAuthority> authorities = new ArrayList<SimpleGrantedAuthority>();
+//        System.out.println(role);
+//        for (String each: role.split(",")) {
+//
+//            authorities.add(new SimpleGrantedAuthority(each));
+//        }
+//        return authorities;
         return Arrays.stream(role.split(","))
                 // 对list中每个元素新建一个SimpleGrantedAuthority对象
                 .map(SimpleGrantedAuthority::new)

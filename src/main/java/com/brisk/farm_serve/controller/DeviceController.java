@@ -8,6 +8,8 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+
 @RestController
 @RequestMapping(value = "/device")
 @Api(tags = "设备: Device")
@@ -34,6 +36,20 @@ public class DeviceController {
     @ApiOperation(value = "删除设备")
     public CommonResult<Object> deleteDevice(@PathVariable(value = "device_id") Long device_id){
         deviceInfoService.deleteDevice(device_id);
+        return CommonResult.success();
+    }
+
+    @GetMapping(value = "/area/{area_id}")
+    @ApiOperation(value = "查询地块中的设备")
+    public CommonResult<ArrayList<Device>> getDeviceByAreaId(@PathVariable(value = "area_id") Long area_id) {
+        ArrayList<Device> devices = deviceInfoService.getDeviceByAreaId(area_id);
+        return CommonResult.success(devices);
+    }
+
+    @PostMapping(value = "/update")
+    @ApiOperation(value = "修改设备")
+    public CommonResult<Object> updateDevice(@RequestBody Device device) {
+        deviceInfoService.updateDevice(device);
         return CommonResult.success();
     }
 }

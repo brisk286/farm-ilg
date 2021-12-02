@@ -21,4 +21,15 @@
             device_id = #{device_id};
     </delete>
 
+    <select id="getDeviceByAreaId" resultType="com.brisk.farm_serve.pojo.po.Device">
+        select * from device where area_id = #{area_id};
+    </select>
+
+    <update id="updateDevice">
+        update
+            device set device_name=#{device.device_name}, device_system=#{device.device_system}, device_value=#{device.device_value}, last_time=#{device.last_time}, dur_time=#{device.dur_time}, area_id=#{device.area_id}, is_run=#{device.is_run}, is_wrong=#{device.is_wrong}, ser_number=#{device.ser_number}, elec_value=#{device.elec_value}, net_condition=#{device.net_condition}
+        where
+            device_id = #{device.device_id};
+    </update>
+
 </mapper>

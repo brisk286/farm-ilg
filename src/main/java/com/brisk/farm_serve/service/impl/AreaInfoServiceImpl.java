@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class AreaInfoServiceImpl implements AreaInfoService {
@@ -47,6 +48,17 @@ public class AreaInfoServiceImpl implements AreaInfoService {
     @Override
     public ArrayList<Device> getRunDeviceByUserId() {
         return areaMapper.getRunDeviceByUserId(currentUserUtils.getCurrentUser().getUser_id());
+    }
+
+    @Override
+    public ArrayList<Device> getRunDeviceNumByAreaId(Long area_id) {
+        ArrayList<Device> devices = getRunDeviceByUserId();
+        for(int i = 0; i < devices.size(); ++i) {
+            if(devices.get(i).getArea_id() != area_id) {
+                devices.remove(i);
+            }
+        }
+        return devices;
     }
 
     @Override

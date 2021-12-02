@@ -56,8 +56,15 @@ public class AreaController {
 
     @GetMapping(value = "/runDevice")
     @ApiOperation(value = "查询用户拥有的地块中正在运行的设备")
-    public CommonResult<ArrayList<Device>> getRunDeviceNumByUserId(){
+    public CommonResult<ArrayList<Device>> getRunDeviceNumByAreaId(){
         ArrayList<Device> devices = areaInfoService.getRunDeviceByUserId();
+        return CommonResult.success(devices);
+    }
+
+    @GetMapping(value = "/runDevice/{area_id}")
+    @ApiOperation(value = "查询用户拥有的某个地块中正在运行的设备")
+    public CommonResult<ArrayList<Device>> getRunDeviceNumByUserId(@PathVariable(value = "area_id") Long area_id){
+        ArrayList<Device> devices = areaInfoService.getRunDeviceNumByAreaId(area_id);
         return CommonResult.success(devices);
     }
 

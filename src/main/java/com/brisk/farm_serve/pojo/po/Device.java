@@ -24,7 +24,7 @@ public class Device {
     private Timestamp last_time;
 
     @ApiModelProperty(value = "投入使用时间")
-    private Timestamp dur_time;
+    private Long dur_time;
 
     @ApiModelProperty(value = "属于的地块")
     private Long area_id;

@@ -20,13 +20,14 @@ public class User {
 
     private Long farm_id;
 
-    private String full_name;
-
     private Boolean enable;
 
+    private String phone_number;
+
+    private String email;
 
     public UserRepresentation toUserRepresentation() {
-        return UserRepresentation.builder().fullName(this.full_name)
+        return UserRepresentation.builder()
                 .userName(this.user_name).build();
     }
 
